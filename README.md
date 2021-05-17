@@ -4,7 +4,7 @@ Using Vanilla Js to Visualize the sorting algorithms, tried to practice Xd desig
 
 #
 
-![xd](https://github.com/Nisarg38/HTML-CSS-JAVASCRIPT/blob/main/images/p-2-400-380.png)
+![xd-400-300](https://github.com/Nisarg38/Sorting-Algo-Visualizer-Js/blob/main/images/xd-400-300.jpg)
 
 ## Select Sort
 
