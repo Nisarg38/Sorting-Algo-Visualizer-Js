@@ -43,6 +43,40 @@ function genRandBars (num = 20) {
 
 genRandBars();
 
+async function sort(delay = 300){
+
+    let basrs = document.querySelectorAll(".bar");
+
+    for(var i =0 ; i < bars.length ; i++){
+
+        let min_element = i; 
+
+        for(var j = i+1 ; j < bars.length ; j++){
+
+            var right = parseInt(bars[j].childNodes[0].innerHTML);
+  
+           
+            var left = parseInt(bars[min_idx].childNodes[0].innerHTML);
+
+           
+            if (right < left) {
+                if(min_element !== i){
+
+                }
+                min_idx = j;
+            }
+
+    }
+}
+
+function freeze(){
+    document.getElementById("sort").disabled = true;
+    document.getElementById("reset").disabled = true;
+
+    document.getElementById("sort").style.backgroundColor = "#d8b6ff";
+    document.getElementById("reset").style.backgroundColor = "#d8b6ff";
+}
+
 function generate(){
     window.location.reload();
 }
