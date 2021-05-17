@@ -13,7 +13,7 @@ function genRandBars (num = 20) {
 
         bar.classList.add("bar");
 
-        bar.style.height = `${value * 3}px`;
+        bar.style.height = `${value * 3.5}px`;
   
         bar.style.transform = `translateX(${i * 10}px)`;
 
@@ -92,20 +92,12 @@ async function sort(delay = 300){
             bars[i].style.backgroundColor = " greenyellow";
           
         }
-
-        document.getElementById("sort").disabled = true;
-        document.getElementById("reset").disabled = true;
-    
-        document.getElementById("sort").style.backgroundColor = "#d8b6ff";
-        document.getElementById("reset").style.backgroundColor = "#d8b6ff";
     }
 
 function freeze(){
     document.getElementById("sort").disabled = true;
-    document.getElementById("reset").disabled = true;
 
     document.getElementById("sort").style.backgroundColor = "#d8b6ff";
-    document.getElementById("reset").style.backgroundColor = "#d8b6ff";
 }
 
 function generate(){

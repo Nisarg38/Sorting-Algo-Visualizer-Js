@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  background-color: #bf04aa;
 }
 
 .data {
@@ -12,11 +13,12 @@
   width: 2%;
   background-color: greenyellow;
   color: black;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .bar_id {
   font-size: 85%;
   display: flex;
   justify-content: center;
+  color: antiquewhite;
 }
