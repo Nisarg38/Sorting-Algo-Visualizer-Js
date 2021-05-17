@@ -10,9 +10,7 @@ Using Vanilla Js to Visualize the sorting algorithms, tried to practice Xd desig
 
 Visualizing the working behind select sort algorithm
 
-#
-
-![p-2-400-380](https://github.com/Nisarg38/HTML-CSS-JAVASCRIPT/blob/main/images/p-2-400-380.png)
+![select-sort](https://github.com/Nisarg38/HTML-CSS-JAVASCRIPT/blob/main/images/p-2-400-380.png)
 
 #
 
