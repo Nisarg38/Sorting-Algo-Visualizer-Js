@@ -15,7 +15,7 @@ function genRandBars (num = 20) {
 
         bar.style.height = `${value * 3.5}px`;
   
-        bar.style.transform = `translateX(${i * 10}px)`;
+        bar.style.transform = `translateX(${i * 5}px)`;
 
 
 
@@ -89,7 +89,7 @@ async function sort(delay = 300){
             bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
           
             // Provide lightgreen color to the ith bar
-            bars[i].style.backgroundColor = " greenyellow";
+            bars[i].style.backgroundColor = " #8BD83B";
           
         }
     }
