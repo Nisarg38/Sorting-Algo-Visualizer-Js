@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.data {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 3%;
+}
+
+.bar {
+  width: 2%;
+  background-color: greenyellow;
+  color: black;
+  border-radius: 10px;
+}
+
+.bar_id {
+  display: flex;
+  justify-content: center;
+}
