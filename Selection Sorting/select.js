@@ -45,7 +45,7 @@ genRandBars();
 
 async function sort(delay = 300){
 
-    let basrs = document.querySelectorAll(".bar");
+    let bars = document.querySelectorAll(".bar");
 
     for(var i =0 ; i < bars.length ; i++){
 
@@ -56,18 +56,49 @@ async function sort(delay = 300){
             var right = parseInt(bars[j].childNodes[0].innerHTML);
   
            
-            var left = parseInt(bars[min_idx].childNodes[0].innerHTML);
+            var left = parseInt(bars[min_element].childNodes[0].innerHTML);
 
            
             if (right < left) {
                 if(min_element !== i){
-
+                    bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
                 }
-                min_idx = j;
+                min_element = j;
+            } else{
+                bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
             }
 
+        }
+
+        //Swapping the numbers 
+            var temp1 = bars[min_element].style.height;
+            var temp2 = bars[min_element].childNodes[0].innerText;
+            bars[min_element].style.height = bars[i].style.height;
+            bars[i].style.height = temp1;
+            bars[min_element].childNodes[0].innerText = bars[i].childNodes[0].innerText;
+            bars[i].childNodes[0].innerText = temp2;
+              
+            // To pause the execution of code for 300 milliseconds
+            await new Promise((resolve) =>
+              setTimeout(() => {
+                resolve();
+              }, 200)
+            );
+          
+            // Provide skyblue color to the (min-idx)th bar
+            bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
+          
+            // Provide lightgreen color to the ith bar
+            bars[i].style.backgroundColor = " greenyellow";
+          
+        }
+
+        document.getElementById("sort").disabled = true;
+        document.getElementById("reset").disabled = true;
+    
+        document.getElementById("sort").style.backgroundColor = "#d8b6ff";
+        document.getElementById("reset").style.backgroundColor = "#d8b6ff";
     }
-}
 
 function freeze(){
     document.getElementById("sort").disabled = true;
