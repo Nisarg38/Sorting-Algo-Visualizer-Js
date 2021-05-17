@@ -14,7 +14,7 @@ Visualizing the working behind select sort algorithm
 
 #
 
-## Buble Sort
+## Bubble Sort
 
 #
 
