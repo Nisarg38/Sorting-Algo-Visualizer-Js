@@ -91,8 +91,8 @@ async function sort(delay = 300){
             // Provide lightgreen color to the ith bar
             bars[i].style.backgroundColor = " #8BD83B";
           
-        }
     }
+}
 
 function freeze(){
     document.getElementById("sort").disabled = true;
