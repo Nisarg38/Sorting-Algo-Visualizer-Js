@@ -47,11 +47,41 @@ async function sort(delay = 300){
 
     let bars = document.querySelectorAll(".bar");
 
+
+    for(let j = 0; j < bars.length; j++){
+
     for(var i =0 ; i < bars.length ; i++){
 
-        let min_element = i; 
+            var right = parseInt(bars[j].childNodes[0].innerHTML)
+
+            var left = parseInt(bars[i].childNodes[0].innerHTML)
+
+            bars[i].style.backgroundColor = "  rgb(24, 190, 255)";
+            bars[j].style.backgroundColor = "  rgb(24, 190, 255)";
+
+            if(right < left ){
+
+                await new Promise((resolve) =>
+                    setTimeout(() => {
+                    resolve();
+                }, 150)
+                );
+
+                var temp1 = bars[j].style.height;
+                var temp2 = bars[j].childNodes[0].innerText;
+                bars[j].style.height = bars[i].style.height;
+                bars[i].style.height = temp1;
+                bars[j].childNodes[0].innerText = bars[i].childNodes[0].innerText;
+                bars[i].childNodes[0].innerText = temp2;
+            }
+
+        bars[j].style.backgroundColor = " #8BD83B";
+        bars[i].style.backgroundColor = " #8BD83B";
+
+
 
     }
+}
 }
 
 function freeze(){

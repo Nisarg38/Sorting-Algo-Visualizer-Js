@@ -16,6 +16,10 @@ Visualizing the working behind select sort algorithm
 
 ## Bubble Sort
 
+Visualizing the working behind bubble sort algorithm
+
+![bubble-sort](https://github.com/Nisarg38/Sorting-Algo-Visualizer-Js/blob/main/images/select-sort.jpg)
+
 #
 
 ## Insertion Sort
