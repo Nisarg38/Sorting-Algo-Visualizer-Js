@@ -46,53 +46,40 @@ genRandBars();
 async function sort(delay = 300){
 
     let bars = document.querySelectorAll(".bar");
+    
+                for (i = 1; i < bars.length; i++)
+                { 
 
-    for(var i =0 ; i < bars.length ; i++){
+                    j = i - 1; 
 
-        let min_element = i; 
+                    var left = parseInt(bars[j].childNodes[0].innerHTML)
 
-        for(var j = i+1 ; j < bars.length ; j++){
+                    var right = parseInt(bars[i].childNodes[0].innerHTML)
 
-            var right = parseInt(bars[j].childNodes[0].innerHTML);
-  
-           
-            var left = parseInt(bars[min_element].childNodes[0].innerHTML);
-
-           
-            if (right < left) {
-                if(min_element !== i){
-                    bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
-                }
-                min_element = j;
-            } else{
-                bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
-            }
-
-        }
-
-        //Swapping the numbers 
-            var temp1 = bars[min_element].style.height;
-            var temp2 = bars[min_element].childNodes[0].innerText;
-            bars[min_element].style.height = bars[i].style.height;
-            bars[i].style.height = temp1;
-            bars[min_element].childNodes[0].innerText = bars[i].childNodes[0].innerText;
-            bars[i].childNodes[0].innerText = temp2;
-              
-            // To pause the execution of code for 300 milliseconds
-            await new Promise((resolve) =>
-              setTimeout(() => {
-                resolve();
-              }, 200)
-            );
-          
-            // Provide skyblue color to the (min-idx)th bar
-            bars[min_element].style.backgroundColor = "  rgb(24, 190, 255)";
-          
-            // Provide lightgreen color to the ith bar
-            bars[i].style.backgroundColor = " #8BD83B";
-          
-    }
+                    bars[i].style.backgroundColor = "  rgb(24, 190, 255)";
+                    bars[j].style.backgroundColor = "  rgb(24, 190, 255)";
+        
+                    while (j >= 0 && left > right)
+                    { 
+                        var temp1 = bars[i].style.height;
+                        var temp2 = bars[i].childNodes[0].innerText;
+                        bars[i].style.height = bars[j].style.height;
+                        bars[j].style.height = temp1;
+                        bars[i].childNodes[0].innerText = bars[j].childNodes[0].innerText;
+                        bars[j].childNodes[0].innerText = temp2;
+                         
+                    } 
+                    
+                    bars[j].style.backgroundColor = " #8BD83B";
+                    bars[i].style.backgroundColor = " #8BD83B";
+                } 
+    
+            
+    
+    
+    
 }
+
 
 function freeze(){
     document.getElementById("sort").disabled = true;
