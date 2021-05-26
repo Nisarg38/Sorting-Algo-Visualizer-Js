@@ -47,32 +47,38 @@ async function sort(delay = 300){
 
     let bars = document.querySelectorAll(".bar");
     
-                for (i = 1; i < bars.length; i++)
-                { 
+        for (i = 1; i < bars.length ; i++)
+        { 
 
-                    j = i - 1; 
+            let current = parseInt(bars[i].childNodes[0].innerHTML);
 
-                    var left = parseInt(bars[j].childNodes[0].innerHTML)
+            let j = i-1;
 
-                    var right = parseInt(bars[i].childNodes[0].innerHTML)
+            var left = parseInt(bars[j].childNodes[0].innerHTML);
 
-                    bars[i].style.backgroundColor = "  rgb(24, 190, 255)";
-                    bars[j].style.backgroundColor = "  rgb(24, 190, 255)";
-        
-                    while (j >= 0 && left > right)
-                    { 
-                        var temp1 = bars[i].style.height;
-                        var temp2 = bars[i].childNodes[0].innerText;
-                        bars[i].style.height = bars[j].style.height;
-                        bars[j].style.height = temp1;
-                        bars[i].childNodes[0].innerText = bars[j].childNodes[0].innerText;
-                        bars[j].childNodes[0].innerText = temp2;
-                         
-                    } 
-                    
-                    bars[j].style.backgroundColor = " #8BD83B";
-                    bars[i].style.backgroundColor = " #8BD83B";
-                } 
+            bars[i].style.backgroundColor = "  rgb(24, 190, 255)";
+            bars[j].style.backgroundColor = "  rgb(24, 190, 255)";
+    
+            while (j >= 0 && current < left)
+            {
+
+                var temp1 = bars[j].style.height;
+                var temp2 = bars[j].childNodes[0].innerText;
+                bars[j+1].style.height = temp1;
+                bars[j+1].childNodes[0].innerText = temp2;
+                j--;
+                 
+            } 
+
+            var temp1 = bars[i].style.height;
+            var temp2 = bars[i].childNodes[0].innerText;
+            bars[j+1].style.height = temp1;
+            bars[j+1].childNodes[0].innerText = temp2;
+
+            
+            bars[j].style.backgroundColor = " #8BD83B";
+            bars[i].style.backgroundColor = " #8BD83B";
+        } 
     
             
     
