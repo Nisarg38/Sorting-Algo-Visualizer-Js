@@ -94,6 +94,57 @@ async function sort(delay = 300){
         }
     }
 
+    let bars = document.querySelectorAll(".bar");
+
+    function swap(bars, leftIndex, rightIndex){
+
+        var temp1 = bars[leftIndex].style.height;
+        var temp2 = bars[leftIndex].childNodes[0].innerText;
+        bars[leftIndex].style.height = bars[rightIndex].style.height;
+        bars[rightIndex].style.height = temp1;
+        bars[leftIndex].childNodes[0].innerText = bars[rightIndex].childNodes[0].innerText;
+        bars[rightIndex].childNodes[0].innerText = temp2;
+    }
+
+    function partition(bars, left, right) {
+        var pivot   = bars[Math.floor((right + left) / 2)], //middle element
+            i       = left, //left pointer
+            j       = right; //right pointer
+        while (i <= j) {
+            while (bars[i] < pivot) {
+                i++;
+            }
+            while (bars[j] > pivot) {
+                j--;
+            }
+            if (i <= j) {
+                swap(bars, i, j); //sawpping two elements
+                i++;
+                j--;
+            }
+        }
+        return i;
+    }
+
+function quickSort(bars, left, right) {
+    var index;
+    if (bars.length > 1) {
+        index = partition(bars, left, right); //index returned from partition
+        if (left < index - 1) { //more elements on the left side of the pivot
+            quickSort(bars, left, index - 1);
+        }
+        if (index < right) { //more elements on the right side of the pivot
+            quickSort(bars, index, right);
+        }
+    }
+    return bars;
+}
+// first call to quick sort
+
+function sortedArray(){
+quickSort(bars, 0, bars.length - 1);
+}
+
 function freeze(){
     document.getElementById("sort").disabled = true;
 
