@@ -2,6 +2,8 @@
 
 Using Vanilla Js to Visualize the sorting algorithms, tried to practice Xd designing by building functionality, designing using Xd, and then creating a finished product.
 
+Main Site - https://nisarg38.github.io/Sorting-Algo-Visualizer-Js/
+
 ![xd-](https://github.com/Nisarg38/Sorting-Algo-Visualizer-Js/blob/main/images/xd-.jpg)
 
 #
