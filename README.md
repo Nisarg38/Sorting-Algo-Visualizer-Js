@@ -4,7 +4,7 @@ Using Vanilla Js to Visualize the sorting algorithms, tried to practice Xd desig
 
 Main website - https://nisarg38.github.io/Sorting-Algo-Visualizer-Js/
 
-![index-html](https://github.com/Nisarg38/Sorting-Algo-Visualizer-Js/blob/main/images/index-html.png)
+![index-update](https://github.com/Nisarg38/Sorting-Algo-Visualizer-Js/blob/main/images/index-update.png)
 
 Making site responsive and useable for 1336x768 (majority of internet traffic) by taking advantage of white space and making safe area while Designing.
 
